@@ -29,3 +29,17 @@ Route::get('ID/{id}',function($id){
 Route::get('opt/{name?}',function($name="Arsalan Sabir"){
     echo 'Name:' .$name;
 });
+
+//Middleware Route
+
+Route::get('role',[
+    'middleware' => 'role:editor',
+   'uses' => 'TestController@index',
+]);
+
+//Terminate Middleware Route
+
+Route::get('terminate',[
+    'middleware'=> 'terminate',
+    'uses'=>'TerminateController@index',
+]);
