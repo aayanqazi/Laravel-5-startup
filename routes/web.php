@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test',function(){
+    return view('hello');
+});
+
+//Required Parameters
+Route::get('ID/{id}',function($id){
+   echo 'ID: '.$id;
+});
+
+//Optional Parameters
+
+Route::get('opt/{name?}',function($name="Arsalan Sabir"){
+    echo 'Name:' .$name;
+});
