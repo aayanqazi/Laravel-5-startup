@@ -68,3 +68,8 @@ Route::post('/user/register',array(
     'uses' => 'UserRegistration@postRegister'
 ));
 
+// Cookie Route
+Route::get('/cookie/set','CookieController@setCookie');
+Route::get('/cookie/get','CookieController@getCookie');
+
+
