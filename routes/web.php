@@ -43,3 +43,22 @@ Route::get('terminate',[
     'middleware'=> 'terminate',
     'uses'=>'TerminateController@index',
 ]);
+
+//Controller Routes
+
+Route::get('/usercontroller/path',[
+    'middleware' => 'First',
+    'uses' => 'UserController@showPath'
+]);
+
+//Restfull controller
+
+Route::resource('my','MyController');
+
+//Implicity controller route
+Route::controller('test','ImplicitController');
+
+class MyClass{
+   public $foo = 'bar';
+}
+Route::get('/myclass','ImplicitController@index');

@@ -59,6 +59,7 @@ class Kernel extends HttpKernel
         'age' => \helloWorld\Http\Middleware\AgeMiddleware::class,
         'role' => \helloWorld\Http\Middleware\RoleMiddleware::class,
         'terminate' => \helloWorld\Http\Middleware\TerminateMiddleware::class,
-
+        'First' => \helloWorld\Http\Middleware\FirstMiddleware::class,
+        'Second' => \helloWorld\Http\Middleware\SecondMiddleware::class,
     ];
 }
