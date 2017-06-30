@@ -55,10 +55,16 @@ Route::get('/usercontroller/path',[
 
 Route::resource('my','MyController');
 
-//Implicity controller route
-Route::controller('test','ImplicitController');
+//Laravel Requets Route
 
-class MyClass{
-   public $foo = 'bar';
-}
-Route::get('/myclass','ImplicitController@index');
+Route::get('/foo/bar','UriController@index');
+//Registration Form Route
+
+Route::get('/register',function(){
+    return view('register');
+});
+
+Route::post('/user/register',array(
+    'uses' => 'UserRegistration@postRegister'
+));
+
