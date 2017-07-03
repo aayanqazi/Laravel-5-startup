@@ -15,14 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',function(){
-    return view('hello');
-});
 
 Route::get('/blade',function(){
     return view('page');
 });
 
+// Redirecting Route
+Route::get('/test', ['as'=>'testing',function(){
+   return view('test');
+}]);
+
+Route::get('redirect',function(){
+    return redirect()->route('testing');
+});
 
 //Required Parameters
 Route::get('ID/{id}',function($id){
