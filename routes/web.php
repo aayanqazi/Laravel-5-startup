@@ -19,6 +19,11 @@ Route::get('/test',function(){
     return view('hello');
 });
 
+Route::get('/blade',function(){
+    return view('page');
+});
+
+
 //Required Parameters
 Route::get('ID/{id}',function($id){
    echo 'ID: '.$id;
