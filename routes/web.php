@@ -11,9 +11,12 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('stud_create');
 });
+
+Route::post('/create','StudInsertController@insert');
 
 
 Route::get('/blade',function(){
