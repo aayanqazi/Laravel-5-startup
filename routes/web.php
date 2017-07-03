@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test',function(){
-    return view('test1');
+    return view('hello');
 });
 
 //Required Parameters
